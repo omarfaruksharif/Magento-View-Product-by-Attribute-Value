@@ -1,3 +1,9 @@
+<!--
+  Title: Magento View/Render Product in Frontend by it's Attribute Value
+  Description: Display a product in front-end by product attribute in Magento
+  Author: omarfaruksharif (Omar Faruk Sharif)
+  -->
+  
 # Magento-View-Product-by-Attribute-Value
 
 Usually we view the Products in Magento system by visting: http://example.com/catalog/product/__view__/id/__PRODUCT_ID__ .
