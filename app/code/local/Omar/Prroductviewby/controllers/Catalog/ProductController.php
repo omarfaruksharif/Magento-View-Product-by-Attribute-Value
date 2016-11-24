@@ -1,12 +1,17 @@
 <?php
+/**
+ *  Author: Omar Faruk Sharif
+ *  Github: https://github.com/omarfaruksharif/Magento-View-Product-by-Attribute-Value
+ *  Project: Magento-View-Product-by-Attribute-Value
+ */
 
 require_once Mage::getModuleDir('controllers', 'Mage_Catalog').DS.'ProductController.php';
 
 /**
  * Product controller
  *
- * @category   Mage
- * @package    Mage_Catalog
+ * @category   Omar
+ * @package    Omar_Prroductviewby
  */
 class Omar_Prroductviewby_Catalog_ProductController extends Mage_Catalog_ProductController
 {
@@ -19,9 +24,6 @@ class Omar_Prroductviewby_Catalog_ProductController extends Mage_Catalog_Product
     {
         // Get initial data from request
         $categoryId = (int) $this->getRequest()->getParam('category', false);
-
-        //echo '<pre>'; print_r( $this->getRequest()->getParams() ); die();
-
         $params = $this->getRequest()->getParams();
 
         if( !empty($params) ) {
@@ -56,7 +58,6 @@ class Omar_Prroductviewby_Catalog_ProductController extends Mage_Catalog_Product
 
         // Render page
         try {
-            // Let's make Magento fool about
             $this->getRequest()->setActionName('view')->setParam('id', $productId);;
             $viewHelper->prepareAndRender($productId, $this, $params);
         } catch (Exception $e) {
