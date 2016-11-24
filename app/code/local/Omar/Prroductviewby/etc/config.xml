@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Omar_Prroductviewby>
+            <version>1.0.0</version>
+        </Omar_Prroductviewby>
+    </modules>
+    <frontend>
+        <routers>
+            <catalog>
+                <args>
+                    <modules>
+                        <Omar_Prroductviewby before="Mage_Catalog">Omar_Prroductviewby_Catalog</Omar_Prroductviewby>
+                    </modules>
+                </args>
+            </catalog>
+        </routers>
+    </frontend>
+</config>
