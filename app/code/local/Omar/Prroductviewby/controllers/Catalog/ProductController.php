@@ -38,6 +38,12 @@ class Omar_Prroductviewby_Catalog_ProductController extends Mage_Catalog_Product
             $this->_forward('noRoute');
         } else {
             $product = Mage::getModel('catalog/product')->loadByAttribute( $param_attr_key , $param_attr_val);
+            if( empty($product) ) {
+                $this->_forward('noRoute');
+
+                return;
+            }
+
             if( !empty($product->getId()) )
             {
                 $productId = $product->getId();
